@@ -1,0 +1,205 @@
+:root {
+    --hash: #94969f;
+    --dark-hash: #82848f;
+    --font: #2c3043;
+    --myntra-pink: #ff3f6c;
+    --myntra-pink-hover: #e83861;
+}
+
+.Product {
+    font-size: .9rem;
+    margin: 1px 4px;
+    padding-left: 2px;
+}
+
+
+#ProductContainer {
+    width: 18rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+
+}
+
+#ProductContainer:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#ProductImage {
+    height: 18rem;
+    width: 18rem;
+    padding: 10px;
+    object-fit: contain;
+
+}
+
+#BrandName {
+    font-weight: bold;
+    color: var(--font);
+    margin-top: 3px;
+}
+
+#ProductName {
+    font-style: italic;
+    color: var(--dark-hash);
+    max-height: 1.33em;
+    /* Or whatever line height works for you */
+    word-break: break-all;
+    overflow: hidden;
+
+}
+
+#Productprice {
+    font-weight: bold;
+    color: var(--font);
+
+}
+
+#Discount {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--myntra-pink);
+}
+
+#add-to-cart {
+    width: 90%;
+    border-radius: 2px;
+    border: 1px solid var(--dark-hash);
+    padding: 10px;
+    margin: 10px;
+}
+
+#add-to-cart:hover {
+    background-color: var(--myntra-pink-hover);
+    color: white;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    #ProductContainer {
+        width: 12.3rem;
+        height: 22rem;
+        padding: 0px;
+        margin: 0px;
+        cursor: pointer;
+        border: 1px solid var(--hash);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 0px;
+
+    }
+
+    #ProductImage {
+        height: 13.3rem;
+        width: 12.3rem;
+        object-fit: contain;
+
+    }
+
+    .Product {
+        font-size: .8rem;
+        margin: 1px 4px;
+    }
+
+
+
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    #ProductContainer {
+        width: 12.5rem;
+        height: 22rem;
+        padding: 0px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    #ProductImage {
+        height: 12.5rem;
+        width: 12.5rem;
+        object-fit: contain;
+
+    }
+
+    .Product {
+        font-size: .8rem;
+        margin: 0px 0px;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #ProductContainer {
+        width: 13.5rem;
+        height: 22rem;
+        padding: 0px;
+        margin: 10px;
+        cursor: pointer;
+
+    }
+
+    #ProductImage {
+        height: 13.5rem;
+        width: 13.5rem;
+        object-fit: contain;
+
+    }
+
+    .Product {
+        font-size: .8rem;
+        margin: 1px 4px;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1920px) {
+    #ProductContainer {
+        width: 15.5rem;
+        height: 23rem;
+        padding: 0px;
+        margin: 10px;
+        cursor: pointer;
+
+    }
+
+    #ProductImage {
+        height: 15.5rem;
+        width: 15.5rem;
+        object-fit: contain;
+
+    }
+
+    .Product {
+        font-size: .8rem;
+        margin: 1px 4px;
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1930px) {
+    #ProductContainer {
+        width: 15.5rem;
+        height: 24rem;
+        padding: 0px;
+        margin: 10px;
+        cursor: pointer;
+
+    }
+
+    #ProductImage {
+        height: 15.5rem;
+        width: 15.5rem;
+        object-fit: contain;
+
+    }
+
+    .Product {
+        font-size: .9rem;
+        margin: 1px 4px;
+    }
+}

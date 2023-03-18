@@ -1,0 +1,17 @@
+:root {
+    --hash: #94969f;
+    --light-hash:"#cacacc";
+    --dark-hash: #4d4d4e;
+    --font: #2c3043;
+    --myntra-pink: #ff3f6c;
+    --myntra-pink-hover: #e83861;
+    --myntra-pink1:#f16565;
+}
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

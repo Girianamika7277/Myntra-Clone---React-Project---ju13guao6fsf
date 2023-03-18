@@ -1,0 +1,239 @@
+:root {
+    --hash: #94969f;
+    --light-hash: #e6e5e5;
+    --myntra-pink: #ff3f6c;
+    --myntra-pink-hover: #e83861;
+    --dark-hash: #6c6c6d;
+
+}
+#spinner{
+    color: var(--myntra-pink-hover);
+}
+
+.container1 {
+    min-width: 15vw;
+    max-width: 20vw;
+    height: 100vh;
+    margin: 40px;
+    padding: 1rem;
+}
+
+.container1>div {
+    display: flex;
+    align-items: center;
+    padding: 12px 0px;
+}
+
+#sort-by {
+    width: 15rem;
+    border-radius: 0px;
+    text-align: center;
+    background-color: var(--light-hash);
+}
+
+#sort-by option {
+    border-radius: 0px;
+
+}
+
+.container2 {
+    width: 80vw;
+    height: 100vh;
+
+
+}
+
+.container2 select {
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: .5px solid var(--hash);
+}
+
+#clear-all {
+    color: var(--myntra-pink);
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+#clear-all:hover {
+    color: var(--myntra-pink-hover);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.Products {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.moblieBottomSec {
+    display: none;
+}
+.bottomDiv{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.offCanvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    #sort-by {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .Products {
+        grid-template-columns: 50% 50%;
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .container2 {
+        width: 100vw;
+        height: 100vh;
+        margin: 0px 0px;
+    }
+
+    .moblieBottomSec {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0%;
+        background-color: white;
+        height: 3.5rem;
+        width: 100vw;
+        font-size: .9rem;
+        text-align: center;
+        padding: 2px 10px;
+        font-weight: 600;
+        color: #575757;
+    }
+
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .Products {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    #sort-by-container {
+        display: none;
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .container2 {
+        width: 100vw;
+        height: 100vh;
+        margin: 0px 0px;
+    }
+
+    #sort-by {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .moblieBottomSec {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0%;
+        background-color: white;
+        height: 3.5rem;
+        width: 100vw;
+        font-size: .9rem;
+        text-align: center;
+        padding: 2px 10px;
+        font-weight: 600;
+        color: #575757;
+    }
+
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #sort-by-container {
+        display: none;
+    }
+
+    .Products {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .container2 {
+
+        width: 100vw;
+        height: 100vh;
+        margin: 0px 0px;
+    }
+
+    #sort-by {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .moblieBottomSec {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0%;
+        background-color: white;
+        height: 3.5rem;
+        width: 100vw;
+        font-size: .9rem;
+        text-align: center;
+        padding: 2px 10px;
+        font-weight: 600;
+        color: #575757;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1920px) {
+    .Products {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1930px) {
+    .Products {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+
+}
