@@ -25,9 +25,9 @@ function NavBar() {
    console.log(query);
 
 
-  const search=(data)=>{
-    return data.filter((item)=> item.brand.toLowerCase().includes(query));
-  };
+  // const search=(data)=>{
+  //   return data.filter((item)=> item.brand.toLowerCase().includes(query));
+  // };
   
 
   function handleShow() {

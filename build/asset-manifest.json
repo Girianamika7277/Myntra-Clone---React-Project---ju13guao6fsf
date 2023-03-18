@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dc2b01b1.css",
+    "main.js": "/static/js/main.0d04f431.js",
+    "static/js/787.cd597d5f.chunk.js": "/static/js/787.cd597d5f.chunk.js",
+    "static/media/empty_cart.jpg": "/static/media/empty_cart.722e4769425c4349f737.jpg",
+    "static/media/myntra-logo.png": "/static/media/myntra-logo.891e62db360f3f1676af.png",
+    "index.html": "/index.html",
+    "main.dc2b01b1.css.map": "/static/css/main.dc2b01b1.css.map",
+    "main.0d04f431.js.map": "/static/js/main.0d04f431.js.map",
+    "787.cd597d5f.chunk.js.map": "/static/js/787.cd597d5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc2b01b1.css",
+    "static/js/main.0d04f431.js"
+  ]
+}
