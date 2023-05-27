@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc2b01b1.css",
-    "main.js": "/static/js/main.0d04f431.js",
-    "static/js/787.cd597d5f.chunk.js": "/static/js/787.cd597d5f.chunk.js",
-    "static/media/empty_cart.jpg": "/static/media/empty_cart.722e4769425c4349f737.jpg",
-    "static/media/myntra-logo.png": "/static/media/myntra-logo.891e62db360f3f1676af.png",
+    "main.css": "/static/css/main.18a48aeb.css",
+    "main.js": "/static/js/main.b8ee5f2f.js",
+    "static/media/logo.png": "/static/media/logo.4135c68707c2c8b00a6a.png",
+    "static/media/search-icon.svg": "/static/media/search-icon.806e43572eee41e1ccb4716fa52f66e3.svg",
+    "static/media/cart-icon.svg": "/static/media/cart-icon.407144bef75e9bd59232287616bc3d89.svg",
     "index.html": "/index.html",
-    "main.dc2b01b1.css.map": "/static/css/main.dc2b01b1.css.map",
-    "main.0d04f431.js.map": "/static/js/main.0d04f431.js.map",
-    "787.cd597d5f.chunk.js.map": "/static/js/787.cd597d5f.chunk.js.map"
+    "main.18a48aeb.css.map": "/static/css/main.18a48aeb.css.map",
+    "main.b8ee5f2f.js.map": "/static/js/main.b8ee5f2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc2b01b1.css",
-    "static/js/main.0d04f431.js"
+    "static/css/main.18a48aeb.css",
+    "static/js/main.b8ee5f2f.js"
   ]
 }

@@ -1,92 +1,89 @@
-import { Image, InputGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import logo from "../myntra-logo.png"
-import { BiSearchAlt } from 'react-icons/bi';
-import { HiOutlineShoppingBag } from "react-icons/hi";
-import "./css/Nav.css"
-import { React, useContext} from 'react'
-import { Context } from './Context';
+import React, {useRef, useEffect, useContext} from 'react';
+import '../styles/Navbar.css';
+import {Link} from 'react-router-dom';
+import searchIco from '../svg/search-icon.svg';
+import cartIcon from '../svg/cart-icon.svg';
 import Cart from './Cart';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {setSearch} from '../redux/actions/searchActions';
+import {setToggleCart} from '../redux/actions/toggleCartActions';
+import logo from "../img/logo.png";
+
+export default function Navbar() {
+
+    const dispatch = useDispatch();
+    const cartItems = useSelector((state)=>state.cart.cartItems);
+    const showCart = useSelector((state)=>state.toggleCart.showCart);
 
 
+    // used to style the searchIcon
+    const searchIconRef = useRef(null);
 
-function NavBar() {
+    /**
+     * function to change iconRef style on every onFocus
+     */
+    function onFocussearchBox(){
+        searchIconRef.current.style.background = "inherit";
+    }
 
-  const { setShow,cartCount,query,setQuery} = useContext(Context);
-  
-  const navigate = useNavigate();
- 
+    /**
+     * function to change iconRef style on every Blur
+     */
+    function onBlursearchBox(){
+        searchIconRef.current.style.background = "#f5f5f6";
+    }
 
-   console.log(query);
+    // styling the seachIcon when app loads initially
+    useEffect(()=>{
+        searchIconRef.current.style.background = "#f5f5f6";
+    },[])
 
+    useEffect(()=>{
+        console.log(showCart)
+    },[showCart])
 
-  // const search=(data)=>{
-  //   return data.filter((item)=> item.brand.toLowerCase().includes(query));
-  // };
-  
+    
+    return (
+        <div id="navbar-Wrapper">
+            <div id="navbar">
+                <section id="logo">
+                    <Link to='/'><img src={logo} alt="logo" /></Link>
+                </section>
 
-  function handleShow() {
-    setShow(true);
-  }
-  function navigateHome() {
-    navigate("/");
-  }
+                <section id="navlink-Wrapper">
+                    <section id="men">
+                        <Link to='/' className='fontSize1-4rem'>MEN</Link>
+                    </section>
 
+                    <section id="women">
+                        <Link to='/' className='fontSize1-4rem'>WOMEN</Link>
+                    </section>
 
+                    <section id="kid">
+                        <Link to='/' className='fontSize1-4rem'>KID</Link>
+                    </section>
+                </section>
 
-  return (
-    <Navbar collapseOnSelect className='navbar shadow' bg="light" expand="lg" sticky='top' >
-      <Container fluid className='d-flex  align-items-center'>
-        <Navbar.Brand >
-          <div className='icon-holder' onClick={navigateHome} >
-            <Image id='logo' src={logo} />
+                <section id="search">  
+                    <section id="input">
+                        <img className='navIcon' ref={searchIconRef} src={searchIco} alt="search-icon" />
+                        <input type="text" placeholder='Search for products, brands and more' onChange={(e)=>dispatch(setSearch(e.target.value))} onFocus={onFocussearchBox} onBlur={onBlursearchBox}/>
+                    </section>
+                </section>
 
-          </div>
-        </Navbar.Brand>
-        <div className='d-flex justify-content-end align-items-center'>
-          <div className='cart-sec cart-holder' id='cart-icon-small'  onClick={handleShow}>
-            <HiOutlineShoppingBag size={"2.5rem"}  className="cart-icon" />
-            <p className='cart-count cart-list-length'>{cartCount}</p>
+                <section id="cart">
+                    <img className='navIcon' src={cartIcon} alt="cart-icon" onClick={()=>dispatch(setToggleCart(!showCart))}/>
+                    {
+                        // Conditional renderring - if cartItens state variable length is greater than 0
+                        cartItems.length > 0
+                        &&
+                        <p id='cartCount'>{cartItems.length}</p>
+                    }
+                </section>
 
-          </div>
-          <Navbar.Toggle aria-controls="navbarScroll" style={{ textAlign: "end" }} />
-        </div>
-
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav
-            className="me-auto my-2 my-lg-0 py-3"
-
-          >
-            <Nav.Link ><h6>MEN</h6></Nav.Link>
-            <Nav.Link ><h6>WOMEN</h6></Nav.Link>
-            <Nav.Link ><h6>KIDS</h6></Nav.Link>
-
-
-          </Nav>
-          <div className='d-flex '>
-            <InputGroup className='search-box'>
-            <Form.Control aria-label="search-box" placeholder='Search' onChange={(e)=>{setQuery((e.target.value).toLowerCase())}}/>
-            <Button className='search-button bg-light' style={{ border: "1px solid #ced4da" }}>
-              <BiSearchAlt size={"1.5rem"} id='search-icon' /></Button>
-          </InputGroup>
-           <div className='cart-sec cart-holder' id='cart-icon-large' onClick={handleShow}>
-            <HiOutlineShoppingBag size={"2.5rem"}  className="cart-icon" />
-            <p className='cart-count'>{cartCount}</p>
-
-          </div>
+                {/* renderring Cart component */}
+                <Cart />
             </div>
-
-        </Navbar.Collapse>
-      </Container>
-      <Cart />
-
-    </Navbar>
-  );
+        </div>
+    )
 }
-
-export default NavBar;

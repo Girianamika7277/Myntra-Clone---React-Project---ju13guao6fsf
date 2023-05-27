@@ -1,64 +1,111 @@
-import { React, useContext } from 'react';
-import { Modal, Image } from 'react-bootstrap';
-import { Context } from './Context';
-import {ProductInfo} from './Product';
-import emptyCart from '../res/empty_cart.jpg'
-import { useNavigate } from 'react-router-dom';
-import toast, { Toaster } from "react-hot-toast";
-import "./css/Cart.css"
+import React, {useContext, useState, useEffect} from 'react';
+import '../styles/Cart.css';
+import {data} from '../data';
+import {dataFromParent} from './App';
+import Tile from './Tile';
+import {Link} from 'react-router-dom';
+import { Box, Modal, Typography } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import {setCartItems} from '../redux/actions/cartItemsActions';
+import { setToggleCart } from '../redux/actions/toggleCartActions';
+
+export default function Cart() {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state)=>state.cart.cartItems);
+  const showCart = useSelector((state)=>state.toggleCart.showCart);
 
 
-const Cart = () => {
-    const { cartItems, show, setShow,originalPrice,Discount } = useContext(Context);
-    const navigate=useNavigate();
-    function CartDisp() {
-        if (cartItems.length === 0) {
-            return <div className='d-flex flex-column justify-content-center align-items-center'>
-                <Image src={emptyCart} className="h-50" />
-                <h1>Oops! Your cart is empty.</h1>
-                <div id='shop-now' className=' text-center' onClick={shopNow}><h5 className='Product'>Shop Now</h5></div>
-            </div>
-        } else {
-            return <div className="cartContainer">
-                    <div className='itemsContainer'>{cartItems.map((item, i) => {
-                        return <div id='ProductContainer'key={i}  onClick={()=>{setShow(false)}}>
-                        <ProductInfo productX={item} />
-                         </div>
-            })}</div>
-            <div className='cartDetailsContainer'>
-                    <div className='detailsItem d-flex align-items-center justify-content-between'><h5>Total Items</h5><h6>{cartItems.length}</h6></div>
-                    <div className='detailsItem d-flex align-items-center justify-content-between'><h5>Total Original Price</h5><h6>₹{originalPrice}</h6></div>
-                    <div className='detailsItem d-flex align-items-center justify-content-between'><h5>Total Discount</h5><h6>₹{Discount}</h6></div>
-                    <hr id='hDivider'/>
-                     <div className='detailsItem d-flex align-items-center justify-content-between'><h5>Final Price</h5><h6>₹{originalPrice-Discount}</h6></div>
-                <button className='buy-btn' onClick={()=>{toast.success("Thank you for shopping with us")}}><h5>BUY</h5></button>
-            </div>
-            </div>
-        }
-    }
-    function shopNow(e) {
-        e.stopPropagation();
-        setShow(false);
-        navigate("/");
+  // the subtotal of items which has added to cart
+  const [subTotal, setSubTotal] = useState(0);
 
-    }
+  // for toggling the modal div
+  const [showModal, setShowModal] = useState(false);
 
-    
-    return (
+  // for doing the sum of cart items price
+  let tempTotal = 0;
+
+  /**
+   * Function to update cartItem, showModal state variable to their default values
+   * it'll call the function which is recieved by props
+   */
+  function closeModal(){
+    dispatch(setCartItems([]));
+    setShowModal(false);
+    dispatch(setToggleCart(false));
+  }
+
+  // updating the subTotal state variable whenever the cartItems state variable gets updated
+  useEffect(()=>{
+    setSubTotal(tempTotal)
+  },[cartItems])
+
+  return (
+    <div id="cart-window" style={{display : showCart ? "block" : "none"}}>
+      {
+        // Conditional renderring - if cartItems state variable's length is greater than 0
+        cartItems.length > 0
+        ?
         <>
-                    <Toaster/>
-        <Modal show={show} fullscreen onHide={() => setShow(false)}>
-            <Modal.Header closeButton>
-                <Modal.Title>Cart</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className='d-flex justify-content-center'>
-                
-                <CartDisp />
-            </Modal.Body>
+          <div id="cart-wrapper">
+            {
+              // Iterating over cartItems state variable
+              cartItems.map((elem, idx)=>(
+                //used to extract the key, value pair
+                Object.entries(elem).map((obj)=>(
+                  // Iterating over data.js
+                  data.map((item)=>(
+                    // if data.id matches with cartItems state variable's element's key
+                    item.id === Number(obj[0])
+                    &&
+                    <section className="cart-item" key={idx}>
+                      <div>
+                        <Link to={'/'+obj[0]}><Tile data={item}/></Link>
+                      </div>
 
-        </Modal>        </>
+                      {/* used for doing the sum while renderring of item's price which has added to cart */}
+                      <div style={{display : "none"}}>
+                        {
+                          tempTotal += item.finalPrice*obj[1]
+                        }
+                      </div>
 
-    );
-};
+                      <div>
+                        <h3>Quantity : {obj[1]}</h3>
+                        <h3>Total Original Price : {item.strickPrice}</h3>
+                        <h3>Total Discount : {item.strickPrice - item.finalPrice}</h3>
+                        <h3>Final Price : {item.finalPrice}</h3>
+                      </div>
+                    </section>
+                  ))
+                ))
+              ))
+            }
+          </div>
 
-export default Cart;
+          <div id='sub-total'>
+            <h3>Subtotal({cartItems.length} Item) : {subTotal}</h3>
+            <button onClick={()=>setShowModal(true)}>Checkout</button>
+
+            {/* Modal to show the final MessageBox */}
+            <Modal open={showModal} onClose={closeModal}>
+              <Box >
+                <Typography>
+                  <div className='modal'>
+                    <h1>Your Order has been Placed</h1>
+                    <h3>Thank You For Shopping With Us</h3>
+                    <p>Click anywhere outside to close</p>
+                  </div>
+                </Typography>
+              </Box>
+            </Modal>
+          </div>
+        </>
+        
+        // Else
+        :
+
+        <h1 id='empty'>Your Cart is Empty</h1>
+      }
+    </div>
+  )
+}

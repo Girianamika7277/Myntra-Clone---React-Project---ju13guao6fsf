@@ -1,0 +1,39 @@
+#indiv-tile-holder{
+    width: 20rem;
+    margin: 1rem;
+}
+
+#indiv-tile-holder:hover{
+    box-shadow: 0 .4rem 1.2rem 0 rgba(0,0,0,.09);
+    box-sizing: content-box;
+}
+
+#indiv-tile-holder img{
+    width: 100%;
+}
+
+#details-wrapper{
+    padding: 1rem .5rem;
+}
+
+#details-wrapper > h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#details-wrapper > p{
+    color: #535766;
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+}
