@@ -36,7 +36,7 @@ export default function Item() {
 
     // if map already has the key which is equals to id(param) then updating its value with value + 1
     if(map.has(id)){
-      map.set(id, Number(map.get(id))+1);
+      map.set(id, Number(map.get(id)));
     }
     else{
       // if it doesnt have any key equall to id(param) then updating its value with 1
