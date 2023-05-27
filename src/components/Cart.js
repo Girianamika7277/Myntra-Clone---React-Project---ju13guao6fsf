@@ -13,6 +13,7 @@ export default function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state)=>state.cart.cartItems);
   const showCart = useSelector((state)=>state.toggleCart.showCart);
+  
 
 
   // the subtotal of items which has added to cart
@@ -74,6 +75,7 @@ export default function Cart() {
                         <h3>Total Original Price : {item.strickPrice}</h3>
                         <h3>Total Discount : {item.strickPrice - item.finalPrice}</h3>
                         <h3>Final Price : {item.finalPrice}</h3>
+                        
                       </div>
                     </section>
                   ))

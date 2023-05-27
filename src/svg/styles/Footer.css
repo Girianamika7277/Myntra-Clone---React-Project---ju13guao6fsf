@@ -1,0 +1,72 @@
+#footer{
+    width: 100%;
+    background: #FAFBFC;
+    color: #696b79;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 6rem;
+    position: relative;
+    z-index: 200;
+}
+
+#promise{
+    width: 25rem;
+}
+
+
+/* ------Classs--------- */
+.footerItem{
+    padding-right: 3rem;
+}
+
+.itemHeading{
+    font-size: 1.2rem;
+    color: #282c3f;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.itemSubHeading{
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.links{
+    padding-right: 8rem;
+}
+
+.links > a{
+    text-decoration: none;
+    color: #282c3f;
+}
+
+.links > a > img{
+    margin-right: 1.5rem;
+    height: 42px;
+    border-style: none;
+}
+
+.promiseDiv{
+    display: flex;
+    margin: 15px 0 30px;
+    color: #696b79;
+}
+
+.imgContainer{
+    margin-left: -10px;
+    margin-right: 10px;
+    width: 47.5px;
+    height: 40px;
+}
+
+.titleContainer{
+    font-size: 1.4rem;
+}
+
+.titleContainer > strong{
+    color: #282c3f;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+}

@@ -16,6 +16,8 @@ export default function Tile({data}) {
                 <h3>Rs. {data.finalPrice}</h3>
                 <p className='strike'>{data.strickPrice}</p>
                 <p>({data.discount}% OFF)</p>
+              
+  
             </div>
         </div>
     </div>

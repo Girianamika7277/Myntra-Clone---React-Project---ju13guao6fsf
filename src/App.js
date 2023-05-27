@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import Nav from "./components/NavBar"
+import Nav from "./components/Navbar"
 import ProductDetails from './components/ProductDetails';
 import AppContext from './components/Context'
 
