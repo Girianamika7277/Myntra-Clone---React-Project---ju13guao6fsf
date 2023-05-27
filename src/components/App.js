@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Item from "./Item";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 
 //for sharing data from parent to child components
 export const dataFromParent = createContext();

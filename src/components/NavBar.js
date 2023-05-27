@@ -9,7 +9,7 @@ import {setSearch} from '../redux/actions/searchActions';
 import {setToggleCart} from '../redux/actions/toggleCartActions';
 import logo from "../img/logo.png";
 
-export default function Navbar() {
+export default function NavBar() {
 
     const dispatch = useDispatch();
     const cartItems = useSelector((state)=>state.cart.cartItems);
