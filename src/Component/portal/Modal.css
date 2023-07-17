@@ -1,0 +1,72 @@
+.modal_fullpage{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0px ;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .modaal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+    width: 55%;
+    /* height: 600px; */
+    background-color: white;
+    z-index: 1000;
+  }
+  .modal_normal{
+    position: relative;
+    z-index: 1;
+  }
+  .modalDetail{
+    width: 63%;
+  }
+  .priceDiv{
+    padding: 12px;
+    height: 250px;
+    gap: 8px;
+    line-height: 25px;
+    margin-bottom: 14px;
+    /* margin-left: 10%; */
+    border: 1px solid gray;
+    width: 33%;
+    
+  }
+  .Mprice{
+    font-size: 15px;
+   
+}
+.text-linethrough{
+
+  text-decoration: line-through;
+}
+.green{
+  color: green;
+}
+.Mstrickprice{
+  color: green;
+    text-decoration: line-through;
+}
+.Mdiscount{
+    color: red;
+}
+.buttonM{
+  color: white;
+  width: 250px;
+  height: 30px;
+  margin-top: 45px;
+  /* margin-left: 10px; */
+  /* margin: 4px; */
+  /* padding: 11px 50px; */
+  cursor: pointer;
+  background-color: rgb(215, 18, 129);
+  border: none;
+  border-radius: 6px;
+}
+.wishlist{
+  cursor: pointer;
+}

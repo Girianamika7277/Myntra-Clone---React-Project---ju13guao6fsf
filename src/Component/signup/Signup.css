@@ -1,0 +1,38 @@
+.signup_maindiv{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .signup_main{
+    border: 1px solid #DBDBDB;
+    width:330px ;
+    margin-top: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+  .signup_firsttext{
+    
+  }
+  .signup_info{
+    font-size: 12px;
+  }
+  .loginpage__loginUpDiv{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .loginpage__loginUpDiv{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .loginpage_login{
+    border: 1px solid #DBDBDB;
+    margin-top: 2px;
+    width: 329px;
+    padding: 8px;
+    font-size: 15px;
+    height: 45px;
+    
+  }

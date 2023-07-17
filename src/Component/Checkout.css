@@ -1,0 +1,11 @@
+.containt{
+    padding:4% 2% 1% 6% ;
+}
+.input-div {
+    border: 1px solid;
+    padding:3% 3% 3% 3% ;
+    line-height: 70px;
+}
+.input-div input{
+    border: none;
+}
