@@ -1,207 +1,27 @@
-
-body{
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-.flex{
-  display: flex;
-}
-.items-center{
-  align-items: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
-.space-between{
-  justify-content: space-between;
-}
-.flex-column{
-  flex-direction: column;
-}
-.justify-center{
-  justify-content: center;
-  
-}
-.text-center{
-  text-align: center;
-}
-.uppercase{
-  text-transform: uppercase;
-}
-.semibold{
-  font-weight: bolder;
-}
-.mx-2{
-  margin-left:12px ;
-  margin-right: 12px;
-}
-.button{
-  color: white;
-  width: 210px;
-  height: 30px;
-  margin-top: 35px;
-  /* margin: 4px; */
-  /* padding: 11px 50px; */
-  background-color: rgb(215, 18, 129);
-  border: none;
-  border-radius: 6px;
-}
-@media screen and (max-width: 600px) {
-  .button {width: 350px;margin-left: 1px;}
-  
-}
-.button:hover{
-  background-color: whitesmoke;
-  color: rgb(215, 18, 129);
-  /* border: 1px solid rgb(215, 18, 129); */
-  transition: all .5s;
-}
-.line{
-  width: 60%;
-  border: 1px solid;
-  margin: 40px 0;
-}
-.roundDiv{
-  border: 1px solid red;
-  margin: 1vw;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-}
-.roundDiv:hover{
-  color: white;
-  background-color: red;
+.app-main {
+    /* width: 10%; */
+    /* height: 10%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* gap: 50px; */
+    /* background-color: aqua; */
+    /* padding-top: 200px; */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .App {
-  text-align: center;
+.app-midSection {
+    display: flex;
+    flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-contentSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

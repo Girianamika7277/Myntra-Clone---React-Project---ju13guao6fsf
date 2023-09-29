@@ -1,0 +1,27 @@
+.homePageCard-heading {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 0px;
+    max-height: 5em;
+    font-weight: 700;
+}
+
+.HomePageCard-imgContainer{
+    max-width: 100%;
+    margin-bottom: 40px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.HomePageCard-imgContainer img {
+    width: 15vw;
+}

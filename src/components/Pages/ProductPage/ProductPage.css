@@ -1,0 +1,247 @@
+#productPage-main {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+#productPage {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.productPage-imgsContainer {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.productPage-images {
+    width: 49%;
+}
+
+
+/* item details */
+
+.productPage-itemDetailsSection {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.productPage-titleSection {
+    width: 100%;
+    /* height: 120px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.productPage-title {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+}
+
+
+.productPage-name {
+    color: #535665;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.productPage-rating {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 29px;
+    padding: 8px;
+    border: 1px solid #eaeaec;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+.productPage-rating span{
+font-weight: 400;
+opacity: 0.8;
+}
+
+/* productPage-priceSection */
+
+.productPage-priceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.productPage-allprice {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.productPage-ourPrice {
+    font-size: 24px;
+    color: #282c3f;
+    font-weight: 700;
+}
+
+.productPage-strikePrice {
+    font-size: 20px;
+    height: 22px;
+    opacity: .8;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.productPage-strikePrice span{
+    text-decoration: line-through;
+}
+
+.productPage-discount {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #ff905a;
+}
+
+.productPage-taxInclusive {
+    color: #03a685;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* productPage-sizeSection */
+
+.productPage-sizeSection {
+    width: 100%;   
+}
+
+.productPage-sizeHeading {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.productPage-sizeContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* width: 100%; */
+
+}
+
+.productPage-sizes {
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #bfc0c6;
+    border-radius: 50px;
+    padding: 0;
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: #282c3f;
+    line-height: 46px;
+    font-weight: 500;
+}
+
+.productPage-sizes:hover {
+    border: 1px solid #ff0095;
+}
+
+.productPage-sizes-selected {
+    border: 1px solid #ff0095;
+    color: #ff0095;
+}
+
+/* buttons */
+
+.productPage-buyWishButtonSection {
+    display: flex;
+    gap: 10px;
+    height:50px;
+}
+
+.productPage-buyButton {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    text-align: center;
+}
+
+.productPage-buyButton:hover {
+    opacity: 0.8;
+}
+
+.productPage-wishButton {
+    width: 170px;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #bfc0c6;
+    color: rgb(0,0,0,0.8);
+    text-align: center;
+}
+
+.productPage-wishButton:hover {
+    border: 1px solid #636363;
+}
+
+
+@media (max-width:768px){
+    #productPage {
+        flex-direction: column;
+    }
+
+    .productPage-imgsContainer {
+        display: flex;
+        align-self: center;
+    }
+    .productPage-imgsContainer img:first-child ~ img {
+            display: none;
+    }
+
+    .productPage-images {
+        width: 100%;
+    }
+
+    .productPage-itemDetailsSection {
+        width: 100%;
+    }
+
+    .productPage-buyWishButtonSection {
+        justify-content: center;
+    }
+}

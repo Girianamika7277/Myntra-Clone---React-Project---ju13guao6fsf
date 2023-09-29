@@ -1,0 +1,110 @@
+.signupPage-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: white;
+    padding: 4rem 0;
+}
+
+.signupPage-form {
+    z-index: 1000;
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+    border: 2px solid #ff3e6c66;
+    /* box-shadow: 0 0 5px rgba(211, 93, 195); */
+    padding: 50px 35px;
+}
+
+.signupPage-form * {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.signupPage-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    color: #ff3e6c;
+}
+
+.signupPage-form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.signupPage-form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #ff84a066;
+}
+
+.signupPage-form input::placeholder {
+    color: #5050508e;
+}
+
+.signupPage-form button {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    text-align: center;
+}
+
+.signupPage-form button:hover {
+    opacity: 0.7;
+}
+
+.signupPage-form button.loading-disabled-btn {
+    border: 1px solid #949494;
+    background-color: #949494;
+    color: #c4c4c4;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.signupPage-form a {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signupPage-form a:hover {
+    color: #ff3e6c;
+}
+
+
+@media screen and (max-width: 786px) {
+    .signupPage-form {
+        height: 80%;
+        width: 80%;
+        padding: 10%;
+    }
+}

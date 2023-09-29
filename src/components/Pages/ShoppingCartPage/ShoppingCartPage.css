@@ -1,0 +1,309 @@
+* {
+    user-select: none;
+}
+
+#ShoppingCartPage {
+    position: relative;
+}
+
+#ShoppingCartPage-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.05);
+}
+
+
+.ShoppingCartPage-logoHolder {
+    height: 100%;
+    padding: 14px;
+}
+
+.ShoppingCartPage-logo {
+    height: 100%;
+}
+
+
+#ShoppingCartPage-navMid {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.ShoppingCartPage-navHighlight {
+    color: rgb(31, 151, 31);
+    display: inline-block;
+}
+
+.ShoppingCartPage-navHighlight::after {
+    content: "";
+    width: 9.5%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(31, 151, 31);
+}
+
+.ShoppingCartPage-secureContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.ShoppingCartPage-secureContainer img {
+    width: 26px;
+    /* height: 28px; */
+    /* display: flex; */
+    /* gap: 10px; */
+}
+
+
+/* body content */
+.ShoppingCartPage-container {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    /* border: 2px solid red; */
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ShoppingCartPage-main {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid rgb(241, 162, 44); */
+}
+
+/* listing section */
+
+.ShoppingCartPage-itemListSection {
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid #eaeaec;
+    padding: 30px 20px;
+}
+
+.ShoppingCartPage-itemListSection table {
+    width: 100%;
+
+}
+
+.ShoppingCartPage-itemListSection table tr {
+    border-bottom: 1px solid #eaeaec;
+    width: 100%;
+    height: 50px;
+
+}
+
+.ShoppingCartPage-itemListSection table tr th {
+    font-size: 12px;
+    font-weight: 700;
+    color: #535766;
+    text-align: center;
+    padding: 8px;
+    padding-top: 0;
+}
+
+.ShoppingCartPage-itemListSection table tr td {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.ShoppingCartPage-tableImg {
+    width: 50px;
+}
+
+.ShoppingCartPage-tableDesc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 18px;
+    overflow: hidden;
+
+}
+
+.ShoppingCartPage-tableDesc h3 {
+    font-size: 0.8rem;
+}
+
+.ShoppingCartPage-tableDesc h4 {
+    font-size: 0.6rem;
+    color: #535766;
+    opacity: 0.8;
+}
+
+.ShoppingCartPage-addBox {
+    border: 1px solid #eaeaec;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.ShoppingCartPage-addBox2 {
+    border: 1px solid #eaeaec;
+    background-color: #eaeaec;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ShoppingCartPage-addBox2:hover {
+    border: 1px solid #acacac;
+    background-color: #acacac;
+    color: white;
+}
+
+.ShoppingCartPage-addBoxDelete {
+    border: 1px solid #eaeaec;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ShoppingCartPage-addBoxDelete:hover {
+    border: 1px solid #eaeaec;
+    background-color: #ff3e6c;
+    color: white;
+}
+
+.ShoppingCartPage-listPrice {
+    font-weight: 500;
+    width: 10%;
+}
+
+/* price section */
+.ShoppingCartPage-PriceSection {
+    /* border: 2px solid rgb(116, 241, 44); */
+    width: 30%;
+    padding: 20px;
+    border-left: 1px solid #eaeaec;
+}
+
+.ShoppingCartPage-priceBaseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ShoppingCartPage-priceheading {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 24px 0 16px;
+    color: #535766;
+}
+
+.ShoppingCartPage-priceDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ShoppingCartPage-priceDetail h3 {
+    font-size: 14px;
+    color: #282c3f;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.ShoppingCartPage-totalAmount {
+    border-top: 1px solid #eaeaec;
+}
+
+.ShoppingCartPage-totalAmount h3 {
+    font-weight: 700;
+    font-size: 15px;
+    padding-top: 16px;
+    color: #3e4152;
+}
+
+
+.ShoppingCartPage-buyButton {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    text-align: center;
+}
+
+.ShoppingCartPage-buyButton:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #ShoppingCartPage-nav {
+        height: 60px;
+        padding: 10px 10px;
+    }
+
+    #ShoppingCartPage-navMid {
+        font-size: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+    .ShoppingCartPage-secureContainer {
+        scale: 0.6;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ShoppingCartPage-container {
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        padding: 0 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ShoppingCartPage-main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .ShoppingCartPage-PriceSection {
+        width: 100%;
+    }
+
+    .ShoppingCartPage-itemListSection {
+        width: 100%;
+        border-right: none;
+        padding: 30px 0px 0px 0px;
+        scale: 0.9;
+    }
+}

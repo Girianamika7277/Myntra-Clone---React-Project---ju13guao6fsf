@@ -1,0 +1,87 @@
+.NavSidebar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 200vw;
+    overflow-y: scroll;
+    z-index: 1000;
+    box-shadow: 10px 0px 400px #000;
+}
+
+.hideElement {
+    display: none;
+}
+
+.NavSidebar-profile {
+    color: #ffffff;
+    font-size: 20px;
+    position: relative;
+    padding: 20px 24px;
+    font-weight: 700;
+    background: #3f3947;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Assistant,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.NavSidebar-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    font-size: 1.5rem;
+    background: none;
+    color: #bbbbbb;
+    font-weight: 400;
+}
+
+.NavSidebar-nav-ul {
+    color: #333;
+    font-size: 14px;
+    background: #fff;
+    border-bottom: 1px solid #eaeaec;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.NavSidebar-cat {
+    font-size: 15px;
+    color: #3e4152;
+    position: relative;
+    overflow: hidden;
+    
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    padding: 14px 20px;
+}
+
+.NavSidebar-cat:hover {
+    opacity: 0.8;
+    color: rgb(255, 62, 95, 0.8);;
+}
+
+.NavSidebar-cat2 {
+    font-weight: 500;
+}
+
+.break {
+    border-top: 0.5px solid #3e4152 ;
+    opacity: 0.1;
+}

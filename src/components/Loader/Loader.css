@@ -1,0 +1,16 @@
+.loader-wrapper {
+	height: 87vh;
+	width: 100%;
+	background: white;
+	/* padding: 4rem 0; */
+}
+
+.loader-img-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
