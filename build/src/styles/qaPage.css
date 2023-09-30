@@ -1,0 +1,44 @@
+/* Default styles */
+.qa-page {
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  height: calc(100-50px);
+}
+
+.left-panel {
+  margin-top: 0px;
+  background-color: white;
+  width: 30%;
+  padding: 20px;
+}
+
+.right-panel {
+  margin-right: 50px;
+  padding-left: 10px;
+  background-color: white;
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  justify-self: center;
+  align-items: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .qa-page {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .left-panel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .right-panel {
+    width: 100%;
+    margin-right: 0;
+  }
+}

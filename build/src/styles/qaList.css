@@ -1,0 +1,87 @@
+.quorabox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    float: left;
+    width: 52%;
+    margin-left: 20px;
+    margin-top: 20px;
+  
+    
+  }
+  
+  .post-top-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .post-profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  .post-user-name {
+    font-weight: bold;
+  }
+  
+  .share-hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+  }
+  
+  .share-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .share-options h2 {
+    margin: 0;
+  }
+  
+  .share-options p {
+    margin: 10px 0;
+  }
+     
+
+
+  /* ................................ */
+
+  .quorabox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+
+  .share-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .share-options h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .share-options p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .post-top-left:hover {
+    background-color: #ebe0e0;
+  }
+  
+  

@@ -1,0 +1,70 @@
+
+.add-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .add-answer h2 {
+    margin-top: 0;
+  }
+  
+  .add-answer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .add-answer label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .add-answer select,
+  .add-answer textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .add-answer select {
+    height: 40px;
+  }
+  
+  .add-answer textarea {
+    height: 150px;
+  }
+  
+  .add-answer .button_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .add-answer button[type="submit"],
+  .add-answer button[type="button"] {
+    padding: 10px;
+    background-color:red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-answer button[type="submit"]:hover,
+  .add-answer button[type="button"]:hover {
+    background-color: red;
+  }
