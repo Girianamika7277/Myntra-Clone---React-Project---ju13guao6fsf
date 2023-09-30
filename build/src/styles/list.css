@@ -1,0 +1,40 @@
+
+
+
+    .list-of-questions {
+      position: sticky;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 20px;
+      margin-right: auto;
+      left: 10%;
+      justify-self: center;
+      align-items: center;
+    }
+    
+    
+    .list-of-questions h2 {
+      margin-top: 0;
+    }
+    
+    .list-of-questions ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .list-of-questions li {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .list-of-questions a {
+      color: blue;
+      text-decoration: none;
+    }
+    
+    .list-of-questions a:hover {
+      text-decoration: underline;
+    }
+    

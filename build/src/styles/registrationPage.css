@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro:wght@300&display=swap');
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .existing-account {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .register-button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
