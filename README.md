@@ -4,7 +4,7 @@ This web app is a closest clone of an e-commerce website - Myntra built using Re
 
 ## Demo
 
-https://myntra-clone-pi.vercel.app/
+
 ## Features
 
 - Home page, catalog page, product page, cart page, user signin/signup page.
